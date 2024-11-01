@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>USER MANUAL for wp-sub-and-category plugin</title>
+<script type="text/javascript" src="assets/lib/showdown-1.9.0/dist/showdown.min.js"></script>
+<script type="text/javascript">
+ window.onload = function() {  
+  var mdFile = new XMLHttpRequest();
+  mdFile.responseType = "text";
+  mdFile.open("GET", "user-manual.md", true);
+  mdFile.onreadystatechange = function(evt){
+   if (mdFile.readyState === 4 && mdFile.status === 200)   
+   {
+      var mdText = mdFile.responseText; 
+      var converter = new showdown.Converter();
+      var html = converter.makeHtml(mdText);
+      document.getElementById("content").outerHTML = html;
+   }
+  }
+  mdFile.send(null);
+};
+</script>
+<style>
+/*just little code styling*/
+pre {
+border: 1px solid lightgray;
+border-left: 2px solid gray;
+padding: 0.5em;
+display: inline-block;
+}
+
+code {
+  padding: 1em;
+  color: gray;
+  background: #ededed;
+  display: inline-block;
+}
+</style>
+</head>
+<body>
+  <div id="content"></div>
+</body>
+</html>

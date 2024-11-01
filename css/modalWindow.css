@@ -1,0 +1,241 @@
+@CHARSET "UTF-8";
+
+
+#available_options-body .mce-itj_button_on {
+  border: 1px solid green;
+  background-color: #eef7ee;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#available_options-body .mce-itj_button_off {
+  border: 1px solid red;
+  background-color: #f9f3f3;
+  /*shade of #f7eeee <- this was too red & dark, don't match to green background*/
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#insert_sub_and_category .mce-listbox, #insert_sub_and_category .mce-textbox {
+  border: 1px solid #a8a8a8;
+  margin-top: 2px;
+}
+
+#ignore_all .mce-i-checkbox {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #a8a8a8;
+}
+
+/*active listbox option*/
+#insert_sub_and_category ~ .mce-menu .mce-menu-item.mce-active {
+    background: #939393;
+}
+
+#insert_sub_and_category ~ .mce-menu .mce-menu-item:hover {
+    background-color: #bdbdbd;
+}
+
+#insert_sub_and_category .mce-textbox.mce-disabled {
+  border: 1px solid lightgray;
+}
+
+#insert_sub_and_category.mce-window .mce-btn:focus,
+#insert_sub_and_category .mce-tab:focus {
+ box-shadow: 0 0 6px #939393; 
+}
+
+/*buttons in footer*/
+#insert_sub_and_category .mce-foot .mce-btn {
+    background: whitesmoke;
+    border-color: #696969;
+    color: whitesmoke;
+}
+
+#insert_sub_and_category .mce-foot .mce-btn.mce-primary {
+    background: #8a8a8a;
+}
+
+#insert_sub_and_category .mce-foot .mce-btn:focus {
+  border: 1px solid lightgray;
+  box-shadow: 0 0 6px #8a8a8a inset; 
+}
+
+#insert_sub_and_category .mce-foot .mce-btn.mce-primary:focus {
+  box-shadow: 0 0 6px #eef7ee inset;
+}
+
+/*X - close*/
+#insert_sub_and_category .mce-window-head .mce-close:focus .mce-i-remove::before, #insert_sub_and_category .mce-window-head .mce-close:hover .mce-i-remove::before {
+    color: #8a8a8a;
+}
+
+#insert_sub_and_category .mce-window-head .mce-close:focus .mce-i-remove {
+ box-shadow:0 0 0 1px #939393,0 0 2px 1px #939393;
+}
+
+#available_options-head .mce-tab.itj_disabled_tab, #available_options-body .mce-container-text.mce-disabled
+  {
+  color: grey;
+  border-color: #e0e0e0;
+}
+
+#insert_sub_and_category-head {
+    background-color: whitesmoke;
+}
+
+#available_options-head .mce-tab.mce-active {
+  border-bottom-color: transparent;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  height: auto;
+  background-color: whitesmoke;
+}
+
+#insert_sub_and_category {
+  resize: both;
+}
+
+/* tested in modal window: all div's (with headers in tabpanel) get padding*/
+#insert_sub_and_category .mce-form {
+  padding: 10px !important;
+}
+
+/* tested in modal window: margin for all items*/
+#insert_sub_and_category .mce-formitem {
+  margin: 10px !important;
+}
+
+#insert_sub_and_category .mce-listbox, #insert_sub_and_category .mce-radio-button
+  {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+
+
+/* tested in modal window: all div-containers get height auto */
+#insert_sub_and_category .mce-container, #insert_sub_and_category .mce-container-body {
+  max-width: 100% !important;
+ }
+
+#insert_sub_and_category,  #insert_sub_and_category .mce-foot {
+  overflow: auto;
+}
+
+#insert_sub_and_category .mce-container,
+  #insert_sub_and_category .mce-container-body {
+  height: auto !important; 
+}
+
+/*if there is auto height in options, listbox moves next 3rd option to newline*/
+#insert_sub_and_category .mce-formitem.mce-container {
+    height: 32px !important;
+}
+
+
+
+/* tested in modal window: display block to labels (such as questions for listbox etc.) to take all line so button can be in newline*/
+#insert_sub_and_category .mce-abs-layout-item.mce-label {
+  display: inline-block !important;
+}
+
+/*  tested in modal window: textbox are 100% of window */
+#insert_sub_and_category .mce-abs-layout-item.mce-textbox {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  display: inline-block !important;
+  width: 200px !important;
+  margin-left: 10px;
+}
+
+
+
+/*end of reset*/
+#insert_sub_and_category .mce-container-text p {
+  white-space: normal;
+}
+
+#available_options .mce-container, #available_options .mce-container-body {
+  width: 100% !important;
+  float: left;
+}
+
+/* tested in modal window:  !!! !!! set position static for all items !!! !!! most necesarry*/
+#insert_sub_and_category .mce-abs-layout-item {
+  position: static !important;
+  width: auto !important;
+}
+
+#available_options .mce-container.mce-container-text, #available_options .mce-container-text .mce-container-body
+  {
+  width: 100% !important;
+}
+
+#insert_sub_and_category #insert_sub_and_category-body,
+  #insert_sub_and_category-body .mce-container-body.mce-abs-layout {
+  width: 100% !important;
+}
+
+#basic_options .mce-formitem, #advanced_options .mce-formitem,
+  #more_advanced_options .mce-formitem {
+  border: 1px dotted lightgray;
+}
+
+#basic_options .oneColumn, #advanced_options .oneColumn,
+  #more_advanced_options .oneColumn {
+  width: 450px !important;
+}
+
+#basic_options .twoColumns, #advanced_options .twoColumns,
+  #more_advanced_options .twoColumns {
+  width: calc(( 100% - ( 2 * 2 * 10px))/2 - 20px) !important;
+}
+
+#basic_options .bigColumns, #advanced_options .bigColumns,
+  #more_advanced_options .bigColumns {
+  width: 900px !important;
+}
+
+#insert_sub_and_category .mce-listbox button, #insert_sub_and_category .mce-textbox,
+  #insert_sub_and_category .mce-radio-button {
+  height: 28px !important;
+}
+
+
+/* foot always on bottom of insert_sub_and_category*/
+ #insert_sub_and_category .mce-foot {
+    position: fixed;
+    bottom: 0 !important;
+    top: auto !important;
+}
+ 
+#available_options .mce-formitem .mce-container-body.mce-abs-layout {
+  justify-content: space-between;
+  display: flex !important;
+}
+
+#insert_sub_and_category ~ .mce-menu,
+#insert_sub_and_category ~ .mce-menu .mce-container-body  {
+  width: auto !important;
+}
+
+#available_options-head .mce-tab {
+  float: left;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-right: -1px;
+  border-color: #bdbdbd;
+}
+
+#available_options-head {
+  border: none;
+}
+
+
+
